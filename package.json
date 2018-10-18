@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Danchetto/calculator.git"
+    "url": "git+https://github.com/kabachok169/tests.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Danchetto/calculator/issues"
+    "url": "https://github.com/kabachok169/tests/issues"
   },
-  "homepage": "https://github.com/Danchetto/calculator#readme"
+  "homepage": "https://github.com/kabachok169/tests#readme"
 }
