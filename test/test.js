@@ -29,11 +29,11 @@ describe('calculator', function() {
         assert.equal(calculator.calculate('0 / 0'), 'error');
     });
 
-    it('check priority', function() {
+    it('check calculations', function() {
         assert.equal(calculator.calculate('32 + 63 / 3 - 53 * 2'), -53);
     });
 
-    it('check input line validity', function() {
+    it('check correct input', function() {
         assert.equal(calculator.calculate('1+ 2'), 'error');
         assert.equal(calculator.calculate('1 +2'), 'error');
         assert.equal(calculator.calculate('1g +d2'), 'error');
