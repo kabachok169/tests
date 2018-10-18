@@ -35,7 +35,7 @@ class Calculator {
                     
                     const result = this.functions[polska[op]](+polska[op - 2], +polska[op - 1]);
                     
-                    if (result === Infinity) {
+                    if (!isFinite(result)) {
                         return 'error';
                     }
                     
