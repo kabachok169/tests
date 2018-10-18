@@ -34,10 +34,14 @@ class Calculator {
                     }
                     
                     const result = this.functions[polska[op]](+polska[op - 2], +polska[op - 1]);
+
+                    console.log(result);
                     
-                    if (result === Infinity) {
+                    if (!isFinite(result)) {
                         return 'error';
                     }
+
+                    console.log(result);
                     
                     polska.splice(op - 2, 3, result);
                     break;

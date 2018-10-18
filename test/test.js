@@ -5,6 +5,18 @@ const assert = require('assert');
 describe('calculator', function() {
     const calculator = new main.calculator();
 
+    it('check function isDigit', function() {
+        assert.equal(calculator.isDigit('63'), true);
+        assert.equal(calculator.isDigit('*'), false);
+        assert.equal(calculator.isDigit('*54'), false);
+        assert.equal(calculator.isDigit('lol'), false);
+    });
+
+    it('check function transformToPolska', function() {
+        assert.deepEqual(calculator.transformToPolska('63 + 21'), ['63', '21', '+']);
+        assert.deepEqual(calculator.transformToPolska('63 + 21 * 2'), ['63', '21', '2', '*', '+']);
+    });
+
     it('check +', function() {
         assert.equal(calculator.calculate('41 + 22'), 63);
         assert.equal(calculator.calculate('1 + 0'), 1);
