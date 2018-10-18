@@ -14,7 +14,7 @@
     "mocha": "^5.2.0"
   },
   "scripts": {
-    "test-with-coverage": "istanbul cover _mocha -- -u exports -R spec",
+    "test-cover": "istanbul cover _mocha -- -u exports -R spec",
     "test": "mocha"
   },
   "repository": {
