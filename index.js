@@ -32,8 +32,14 @@ class Calculator {
                     if (op < 2) {
                         return 'error'
                     }
-
-                    polska.splice(op - 2, 3, this.functions[polska[op]](+polska[op - 2], +polska[op - 1]));
+                    
+                    const result = this.functions[polska[op]](+polska[op - 2], +polska[op - 1]);
+                    
+                    if (result === Infinity) {
+                        return 'error';
+                    }
+                    
+                    polska.splice(op - 2, 3, result);
                     break;
                 }
             }
@@ -65,9 +71,6 @@ class Calculator {
         input = input.split(' ');
 
         for (let i = 0; i < input.length; ++i) {
-            if (input[i] === '/' && input[i + 1] === '0') {
-                return 'error'
-            }
 
             if (this.isDigit(input[i])) {
                 result.push(input[i])
