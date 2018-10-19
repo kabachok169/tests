@@ -11,30 +11,9 @@ describe('calculator', function() {
         assert.equal(calculator.isCorrect('*54'), true);
         assert.equal(calculator.isCorrect('lol'), false);
     });
-
-
-    it('check +', function() {
-        assert.equal(calculator.calculate('41 + 22'), 63);
-        assert.equal(calculator.calculate('1 + 0'), 1);
-    });
-
-    it('check -', function() {
-        assert.equal(calculator.calculate('51 - 12'), 39);
-        assert.equal(calculator.calculate('0 - 0'), 0);
-        assert.equal(calculator.calculate('4 - 5'), -1);
-    });
-
-    it('check *', function() {
-        assert.equal(calculator.calculate('12 * -2'), -24);
-        assert.equal(calculator.calculate('12 * 2'), 24);
-        assert.equal(calculator.calculate('4 * 0'), 0);
-    });
-
-    it('check /', function() {
-        assert.equal(calculator.calculate('3 / 2'), 1.5);
-        assert.equal(calculator.calculate('0 / 2'), 0);
+    
+    it('check zero division', function() {
         assert.equal(calculator.calculate('1 / 0'), 'error');
-        assert.equal(calculator.calculate('0 / 0'), 'error');
     });
 
     it('check calculations', function() {
@@ -44,7 +23,6 @@ describe('calculator', function() {
 
     it('check correct input', function() {
         assert.equal(calculator.calculate('1g +d2'), 'error');
-        assert.equal(calculator.calculate('1 + 2 -'), 'error');
         assert.equal(calculator.calculate('1 + 2 -'), 'error');
 
         assert.equal(calculator.calculate('1.4 2'), 'error');
