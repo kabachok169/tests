@@ -11,7 +11,7 @@ describe('calculator', function() {
         assert.equal(calculator.isCorrect('*54'), true);
         assert.equal(calculator.isCorrect('lol'), false);
     });
-    
+
     it('check zero division', function() {
         assert.equal(calculator.calculate('1 / 0'), 'error');
     });
@@ -33,3 +33,4 @@ describe('calculator', function() {
         assert.equal(calculator.calculate('*'), 'error');
     });
 });
+
