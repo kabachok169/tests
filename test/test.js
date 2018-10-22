@@ -6,8 +6,6 @@ describe('calculator', function() {
     const calculator = new main.calculator();
 
     it('check function isCorrect', function() {
-        assert.equal(calculator.isCorrect('63'), true);
-        assert.equal(calculator.isCorrect('*'), true);
         assert.equal(calculator.isCorrect('*54'), true);
         assert.equal(calculator.isCorrect('lol'), false);
     });
